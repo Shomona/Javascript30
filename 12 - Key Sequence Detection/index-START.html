@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+  <script>
+    var keypressed = ['b', 'e', 'b', 'u'];
+    var secretCode = "bebu"
+    window.addEventListener('keypress', (e) => {
+
+      keypressed.push(e.key);
+
+      keypressed.shift();
+      if (keypressed.join('').includes(secretCode)) {
+        cornify_add();
+
+      }
+
+    });
+  </script>
+</body>
+
+</html>
